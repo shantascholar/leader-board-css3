@@ -139,11 +139,33 @@ top-blogs styles
   /* You need to control .cotainer width other wise you may not see anything , to control width you need to write .container width 100% , without .container width you can see nothing */
                  {
                     .container{
-                        width:
+                        width:100%;
                     }
-                    .players{
-                        background-color:red;
+                    .players, .blogs, .courses{
+                        grid-template-columns: repeat(1, 1fr);
+
                     }
+                    .player, .blog{
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                     
     
+    
+ }
+
+ /* tablet device */
+
+ @media only screen and (min-width: 689px) and (max-width: 990px) {
+        .container{
+            width:100%;
+        }
+        .players, .courses{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .blogs{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
     
  }
